@@ -7,10 +7,11 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
+    "@storybook/addon-coverage"
   ],
   framework: {
     name: "@storybook/nextjs",
-    options: {},
+    options: {builder: {useSWC: true}},
   },
   staticDirs: ["../public"],
 };
