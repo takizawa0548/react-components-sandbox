@@ -60,6 +60,7 @@ jobs:
         run: |
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" "npm run build-storybook -- --quiet && npx serve storybook-static -l 6006" "wait-on tcp:6006 && npm run test-storybook -- --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}"
           ls -la ./coverage/storybook
+          mkdir ./coverage/storybook/${{ matrix.shardIndex }}-${{ matrix.shardTotal }}
           mv ./coverage/storybook/coverage-storybook.json ./coverage/storybook/${{ matrix.shardIndex }}-${{ matrix.shardTotal }}/coverage-storybook-${{ matrix.shardIndex }}-${{ matrix.shardTotal }}.json
       - name: Cache coverage storybook
         uses: actions/cache/save@v4
