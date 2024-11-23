@@ -110,7 +110,7 @@ jobs:
           mv ./coverage/storybook/2-3/coverage-storybook-2.json ./coverage/storybook/merged/coverage-storybook-2.json
           mv ./coverage/storybook/3-3/coverage-storybook-3.json ./coverage/storybook/merged/coverage-storybook-3.json
           ls -la coverage/storybook/merged
-          npx nyc merge ./coverage/storybook/merged --out=./coverage/storybook/coverage-storybook.json
+          npx nyc merge ./coverage/storybook/merged ./coverage/storybook/coverage-storybook.json
           ls -la ./coverage/storybook
           npm run coverage-report
       - name: Upload coverage
