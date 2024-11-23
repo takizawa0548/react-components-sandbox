@@ -116,5 +116,5 @@ jobs:
       - name: Upload coverage
         uses: actions/upload-artifact@v4
         with:
-          path: ./coverage/storybook/coverage-storybook.json
+          path: ./coverage
           name: coverage
