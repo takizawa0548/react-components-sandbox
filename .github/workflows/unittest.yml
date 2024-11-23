@@ -10,11 +10,22 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - uses: actions/cache@v4
-        id: cache
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        id: node_modules-cache
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
+        if: steps.node_modules-cache.outputs.cache-hit != 'true'
         run: npm ci
+      - name: Cache playwright binaries
+        uses: actions/cache@v3
+        id: playwright-cache
+        with:
+          path: |
+            ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-cache-${{ hashFiles('**/package-lock.json') }}
+      - name: Install dependencies
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: npx playwright install
