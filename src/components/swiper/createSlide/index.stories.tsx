@@ -3,8 +3,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Component } from "./index";
 
 const meta = {
-  title: "components/swiper",
-
   component: Component,
 } satisfies Meta<typeof Component>;
 

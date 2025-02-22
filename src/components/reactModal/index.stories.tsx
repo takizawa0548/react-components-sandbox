@@ -4,8 +4,6 @@ import { Component } from "./index";
 import { useState } from "react";
 
 const meta = {
-  title: "components/reactModal",
-
   component: Component,
 } satisfies Meta<typeof Component>;
 
