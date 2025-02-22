@@ -42,7 +42,7 @@ export const Component = memo<Props>(function Component({
       }}
     >
       <Draggable nodeRef={myRef}>
-        <p ref={myRef}>Modal Content</p>
+        <p ref={myRef}>クリックしたら移動する文字なんやで</p>
       </Draggable>
     </Modal>
   );
