@@ -1,0 +1,18 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.List {
+  border: black solid 1px;
+}
+
+.Row {
+  height: 50px;
+  border: black solid 1px;
+  border-left: 0;
+  border-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
