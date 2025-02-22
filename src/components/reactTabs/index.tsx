@@ -1,6 +1,5 @@
 import React,{memo} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { Component as Modal} from '../reactModal';
 import 'react-tabs/style/react-tabs.css';
 import './index.css';
 
@@ -20,7 +19,6 @@ export const Component = memo(function Component() {
       <h2>Any content 2</h2>
     </TabPanel>
   </Tabs>
-  <Modal isOpen={true} onClickCloseButton={() => {}} />
   </>
   )
 });
