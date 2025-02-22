@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import { Component } from './index';
+import { Component } from "./index";
 
 const meta = {
-  title: 'components/swiper',
-  
+  title: "components/swiper",
+
   component: Component,
 } satisfies Meta<typeof Component>;
 
@@ -13,8 +13,6 @@ type Story = StoryObj<typeof Component>;
 
 export const Nomarl: Story = {
   render: () => {
-    return (
-      <Component/>
-    )
-}
-}
+    return <Component />;
+  },
+};

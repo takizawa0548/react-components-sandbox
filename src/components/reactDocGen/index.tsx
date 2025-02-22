@@ -1,6 +1,6 @@
-import React,{memo} from 'react';
-import { parse } from 'react-docgen';
-import './index.css';
+import React, { memo } from "react";
+import { parse } from "react-docgen";
+import "./index.css";
 
 export const Component = memo(function Component() {
   const code = `
@@ -27,9 +27,7 @@ export const Component = memo(function Component({test}: {test: string}) {
   return (
     <div>
       {documentation.map((doc, index) => (
-        <div key={index}>
-          {JSON.stringify(doc)}
-        </div>
+        <div key={index}>{JSON.stringify(doc)}</div>
       ))}
     </div>
   );
